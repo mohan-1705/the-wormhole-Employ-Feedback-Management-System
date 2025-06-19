@@ -4,7 +4,7 @@ Employee Feedback Management System is an ERP platform where an Admin can add re
 The reviews given to an employee can be assigned to other employees by an Admin, who can give feedbacks on that review, suggesting the employee ways of 
 improving his performance or appreciating it.
 
-The platform is implemented using Node.js/Express.js alongside MongoDB as the database. The MongoDB Database has been hosted at Mongo Atlas and deployed using Heroku as a test
+The platform is implemented using Node.js/Express.js alongside MongoDB as the database. The MongoDB Database has been hosted at Mongo Atlas and deployed using pinggy as a test
 version for the purpose of viewing its basic functionality.
 
 
