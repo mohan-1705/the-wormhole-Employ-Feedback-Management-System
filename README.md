@@ -7,7 +7,6 @@ improving his performance or appreciating it.
 The platform is implemented using Node.js/Express.js alongside MongoDB as the database. The MongoDB Database has been hosted at Mongo Atlas and deployed using Heroku as a test
 version for the purpose of viewing its basic functionality.
 
-The Link for the same is :- https://employ-feedback-management.herokuapp.com/
 
 A proper [Demo video](https://drive.google.com/file/d/1RU1dEaxx8HoTYSkSyFSP8F4f28QQXrDn/view?usp=drivesdk) 
 
