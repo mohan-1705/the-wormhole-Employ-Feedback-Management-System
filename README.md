@@ -1,17 +1,19 @@
-# The Employ Feedback Management System [Live]
+# The Employ Feedback Management System [[Live]](https://rnyum-43-227-130-167.a.free.pinggy.link/employ/sign-up)
 
 Employee Feedback Management System is an ERP platform where an Admin can add reviews to the employees in their organisation, based on their performance. 
 The reviews given to an employee can be assigned to other employees by an Admin, who can give feedbacks on that review, suggesting the employee ways of 
 improving his performance or appreciating it.
 
-The platform is implemented using Node.js/Express.js alongside MongoDB as the database. The MongoDB Database has been hosted at Mongo Atlas and deployed using pinggy as a test
+The platform is implemented using Node.js/Express.js alongside MongoDB as the database. The MongoDB Database has been hosted at Mongo Atlas and deployed using Pinggy as a test
 version for the purpose of viewing its basic functionality.
 
-The Link for the same is :- (https://rnozb-43-227-130-167.a.free.pinggy.link/employ/sign-up)
+The Link for the same is :- (https://rnyum-43-227-130-167.a.free.pinggy.link/employ/sign-up)
 
-A proper [Demo video](https://drive.google.com/file/d/1RU1dEaxx8HoTYSkSyFSP8F4f28QQXrDn/view?usp=drivesdk) 
+A proper [Demo video]
+(https://drive.google.com/file/d/1RU1dEaxx8HoTYSkSyFSP8F4f28QQXrDn/view)
 
-**[ this link is code walkthrough video link ](https://drive.google.com/file/d/1kSh6i5vKfiqMQYj75aYJwQNy6uEXWjfT/view?usp=drivesdk)**
+[this link is code walkthrough video link]
+(https://drive.google.com/file/d/1kSh6i5vKfiqMQYj75aYJwQNy6uEXWjfT/view)
 
 Steps for running this project :-
 1. Clone this git repository, making sure you have Node and npm installed on your system.
