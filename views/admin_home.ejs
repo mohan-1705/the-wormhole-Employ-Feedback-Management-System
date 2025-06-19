@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin_home.css">
+
+</head>
+<body>
+    
+    <div class="emp">
+        <h1 class="heading">Admin Dashboard</h1>
+        <div class="admin-details">
+            <div>
+                <h2><%= adm.Name %></h2>
+            </div>
+            <div class="admin-links">
+                <a href="/admin/view/<%= adm.id %>">Profile</a>
+                <a href="/admin/sign-out">Sign Out</a>
+            </div>
+        </div>
+        <ul style="list-style: none;" class="emp-list">
+                                                            <!-- Displaying all employs to perform add/modify review options -->
+            <% for(let employ of employs){ %>   
+                                                            <!-- An Admin can't write his own performance review -->
+               <% if(locals.user.Email != employ.Email){%>  
+                <li>
+                    <div class="details">
+                        <span><b>Name:</b> <%= employ.Name %></span>
+                        <span><b>Email:</b> <%= employ.Email %></span>
+                    </div>
+                    <div class="links">
+                        <a href="/performance/view/<%= employ.id %>"><span><b>Add/Edit Review</b></span></a>
+                        
+                    </div>
+                    <div class="review links">
+                        <% for(let rev of reviews){ %>
+                                                                <!-- Searching for this particular employs review to display -->
+                            <% if(rev.EmpId == employ.id){%> 
+                                <b>Rating:</b>&nbsp;
+
+                                <span><% for(let i=1;i <= rev.rating;i++){ %><i class="fa fa-star"></i><% } %></span>
+                                <span style="color: grey; margin-left: -5px;"><% for(let i = rev.rating + 1;i <= 10;i++){ %><i class="fa fa-star"></i><% } %></span>
+                                
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Review:&nbsp;</b><span><%= rev.review %></span>
+                                &nbsp;&nbsp;&nbsp;<a href="/performance/assign/view/<%= rev.id %>"><span><b>Assign an Employee</b></span></a>
+                                <div>
+                                    <% if(rev.feedbacks.length > 0){%>                                     
+                                        <ul class="feed" >
+                                            <h3>Feedbacks</h3>
+                                            <% for(let feedback of rev.feedbacks){ %>
+                                                <li>
+                                                    <b><%= feedback.byEmploy.Name %></b><a style="padding-left: 90%;" href="/feedback/delete/<%= feedback.id %>"><i class="fa fa-remove"></i></a><br>
+                                                    <br>
+                                                    <span><%= feedback.content %></span>
+                                                    
+                                                </li>
+                                                <hr color="white">
+                                            <% } %>
+
+                                        </ul>
+                                    <% }else{ %>
+                                        <p><b> No feedbacks yet!</b></p>
+                                    <% } %>
+                                </div>
+                            <% } %>
+                        <% } %>
+                        
+                    </div>
+                </li>
+               <% } %>
+
+            <% } %>
+
+        </ul>
+    </div>
+    <aside class="admin-operation">
+        <ul style="list-style: none;">
+            <li>
+                <a href="/admin/create-admin">Make a new Admin</a>
+            </li>
+            <li>
+                <!-- giving the same route of all employs -->
+                <a href="/admin/delete-employ">Delete an employ</a> 
+            </li>
+            <li>
+                <a href="/admin/new-employ">Add a new Employ</a>
+            </li>
+        </ul>
+        <div id="admins">
+            <h3>Other Admins</h3>
+            <hr color="white">
+            <ul class="admin-list" style="list-style-type: none;">
+                <% for(let admin of admins){ %>
+                    <% if(admin.id != locals.user.id){ %>
+                    <li>
+                        <span>
+                            <b>Name:</b><%= admin.Name %>
+                        </span>
+                        <span>
+                            <b>Email:</b><%= admin.Email %>
+                        </span>
+                    </li>
+                    <!-- <hr color="white"> -->
+                    <% } %>
+
+                <% } %>
+            </ul>
+        </div>
+        <div id="employs">
+            <h3>Other Employees</h3>
+            <hr color="white">
+            <ul class="admin-list" style="list-style-type: none;">
+                <% for(let employ of employs){ %>
+                    <% if(!employ.isAdmin){ %>
+                    <li>
+                        <span>
+                            <b>Name:</b><%= employ.Name %>
+                        </span>
+                        <span>
+                            <b>Email:</b><%= employ.Email %>
+                        </span>
+                    </li>
+                    <!-- <hr color="white"> -->
+                    <% } %>
+
+                <% } %>
+            </ul>
+        </div>
+    </aside>
+
+</body>
+</html>
