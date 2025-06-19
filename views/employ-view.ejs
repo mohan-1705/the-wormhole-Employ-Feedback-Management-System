@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= employ.Name%></title>
+    <link rel="stylesheet" href="/css/employ-view.css">
+
+</head>
+<body>
+
+    <% if(locals.user.collection.modelName == 'Admin'){ %>  
+        <a class = "links" href="/admin/home">Home</a>
+    <% }else{ %>
+        <a href="/" class="links">Home</a>
+    <% } %>
+
+    <main>
+        <div class="view-container">
+            <ul>
+                
+                <li><b>Name:</b> <%= employ.Name%></li>
+
+                
+                <li><b>Email:</b> <%= employ.Email %></li>
+
+                
+                <li><b>Admin:</b> <% if(employ.isAdmin || locals.user.collection.modelName == 'Admin'){ %> Yes <% }else{ %> No <% } %></li>
+            </ul>
+        </div>
+
+        <% if(locals.user.isAdmin ||employ.id == locals.user.id  || locals.user.collection.modelName == 'Admin'){ %>                          <!-- Only an Admin or the Employ itself can view this form-->
+            <div class="update-form">
+                <form action="/admin/employ/update/<%= employ.id %>" method="POST">
+                    Email: <input type="Email" name = "Email" required placeholder="Enter Email.." value="<%= employ.Email %>">
+                    Name: <input type="text" name = "Name" placeholder="Enter Name.." value="<%= employ.Name %>"><br>
+                    <button class="btn"type="submit">Update</button>
+                </form>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

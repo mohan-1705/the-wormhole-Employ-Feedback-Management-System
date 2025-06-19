@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employ Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="/css/employ_home.css">
+
+</head>
+<body>
+    <main>
+        <header class="bg-grey">
+            <div>
+                <h1 class="heading">Employ Dashboard</h1>
+            </div>
+            <div class="name-container">
+                <div>
+                    <h2 style="margin-bottom: 0; padding-bottom: 5px;"><%= emp.Name %></h2>
+                    <%if(locals.user.isAdmin){%>
+                        <span><a class="links" href="/admin/sign-in" >Switch to Admin login !?</a></span>
+                    <%}%>
+                </div>
+                <div style="padding:20px 0;">
+                        <a style="margin-right: 10px" class = "links" href="/employ/view/<%= emp.id %>">Profile</a>
+                        <a class ="links" href="/employ/sign-out"> Sign Out</a>
+                </div>
+            </div>     
+        </header>
+
+        <section id="content">
+            <div class="reviews-on-you">
+                <h3 style="margin:0; padding:1%;" class="bg-grey">Review recieved</h3>
+
+                <div class="bg-grey" id="review-container">
+                    <!-- Checking if the employ was reviewed or not -->
+                    <% if(perform){ %> 
+                        <p>
+                            <b>Rating recieved:</b>
+
+                            <span><% for(let i=1;i<=perform.rating;i++){ %><i class="fa fa-star"></i><% } %></span>
+                            <span style="color: grey; margin-left: -5px;"><% for(let i=perform.rating + 1;i <= 10;i++){ %><i class="fa fa-star"></i><% } %></span><br>
+
+                            <b>Remarks:</b><%= perform.review %>
+                        </p>
+                        <div class="feedbacks">
+                            <ul style="list-style-type: none; padding-left: 10px; margin-left:5px;">
+                                <% if(perform.feedbacks.length > 0){%>
+                                    <% for(let feedback of perform.feedbacks){%> 
+                                        <h4><%= feedback.byEmploy.Name %></h4>
+                                        <p><%= feedback.content %></p>
+                                        <hr color="white">
+                                    <% } %>
+                                <% }else{ %>
+                                    <b>No Feedback recieved yet!!</b>
+                                <% } %>
+                            </ul>
+                        </div>
+                    <% }else{ %>
+                        <p>You haven't recieved a review yet!!</p>
+                    <% } %>
+                </div>
+            </div>
+            <div class="review-by-you">
+                <h3 style="margin: 0; padding:1%" class="bg-grey">Give Feedback</h3>
+                <!-- Checking if any reviews were assigned or not -->
+                <!-- <hr> -->
+                <% if(emp.participations.length > 0){ %> 
+                <ul id="feedback-list">
+                    <% for(let perform of emp.participations){%>
+                        
+                    <li class="bg-grey">
+                        <p>
+                            <b>Employee Name:</b>&nbsp;<%= perform.EmpId.Name %><br>
+                            <b>Rating:</b>&nbsp;
+
+                            <!-- For displaying stars -->
+                            <span><% for(let i=1;i<=perform.rating;i++){ %><i class="fa fa-star"></i><% } %></span>
+                            <span style="color: grey; margin-left: -5px;"><% for(let i=perform.rating + 1;i <= 10;i++){ %><i class="fa fa-star"></i><% } %></span><br>
+
+                            <b>Remarks:</b><%= perform.review %>
+                        </p>
+                        <form action="/feedback/add/<%= perform.id %>" method="post">
+                            <input type="text" name="content" placeholder="Enter feedback..." required>
+                            <button class="btn">Add</button>
+                        </form>
+                        <ul style="list-style-type: none; border-left: 1px solid darkgray; padding-left: 10px;margin-left: 20px;">
+                            <% if(perform.feedbacks.length > 0 ){ %>
+                                <% for(let feed of perform.feedbacks){%>
+                                    <li style =" padding-top: 8px;">
+                                        <h4 style="margin-top: 0;"><%= feed.byEmploy.Name %></h4>
+                                        <p>
+                                            <%= feed.content %>
+                                        </p>
+                                        <% if(locals.user.id == feed.byEmploy.id){ %>
+                                            <a href="/feedback/delete/<%= feed.id %>"><button class="btn">Delete</button></a>
+                                        <% } %>
+                                        
+                                    </li>
+                                    <hr color="white">
+                                <% } %>
+                            <% }else{ %>
+                                <b>No Feedbacks yet!!</b>
+                            <% } %>
+                        </ul>
+                    </li>
+                    <!-- <hr> -->
+                    <% } %>
+                </ul>
+                <% }else{ %>
+                    <p>No revews have been assigned to you yet!</p>
+                <% } %>
+            </div>
+        </section>
+    </main>
+    <aside class="admins" style="overflow-y: scroll;">
+        <!-- There will always be one admin -->
+        <div>
+            <h2 style="margin-left: 7px;">Admins</h2>
+            <hr>
+            <ul style="list-style-type: none;">
+                <% for(let admin of admins){ %>
+                    <li>
+                        <b>Name:</b><%= admin.Name %><br>
+                        <b>Email:</b><%= admin.Email %>
+                    </li>
+                    <hr>
+                <% } %>
+            </ul>
+        </div>
+        <div>
+            <h2 style="margin-left: 7px;">Other Employs</h2>
+            <hr>
+            <ul style="list-style-type: none;">
+                <% for(let employ of employs){ %>
+                    <% if(emp.Email != employ.Email){ %>
+                        <li>
+                            <b>Name:</b><a href="/employ/view/<%= employ.id %>" style="text-decoration: none; color: white;"><%= employ.Name %></a><br>
+                            <b>Email:</b><%= employ.Email %>
+                        </li>
+
+                    <hr>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+    </aside>
+</body>
+</html>
