@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.bg-grey{
+    background-color: lightgrey;
+}
+.links{
+    text-decoration: none;
+    color:rgb(143, 48, 231);
+}
+.links:hover{
+    color: black;
+    text-decoration:underline;
+}
+.btn{
+    background-color: purple;
+    color: white;
+    border: 0;
+    border-radius: 10%;
+    padding: 1% 0.3rem 1%;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: black;
+    cursor: pointer;
+}
+main{
+    display: inline-block;
+    width: 70%;
+}
+header{
+    margin-bottom: 3px;
+}
+.name-container{
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+#content{
+    display: flex;  
+}
+.reviews-on-you, .review-by-you{
+    display:inline-block;
+    width:100%;
+    overflow: hidden;
+}
+.review-by-you{
+    margin-left: 2px;
+}
+#review-container{
+    height: 100%;
+    margin-top: 1%;
+    padding: 1%;
+}
+/* .feedbacks{
+    padding-left: ;
+} */
+.feedbacks ul{
+    border-left: 1px solid darkgray;
+}
+.admins{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    background-color: purple;
+    color: white;
+    position: fixed;
+    height: 100vh;
+}
+.heading{
+    background-color: purple; 
+    color: white; 
+    margin: 0; 
+    padding: 10px 0;
+
+}
+#feedback-list{
+    margin-top: 1%;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+    
+}
+#feedback-list li{
+    margin-bottom: 1%;
+    padding: 1%;
+    
+}
+
+/* Effects for scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(138, 43, 226); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(181, 113, 241, 0.603); 
+  }
