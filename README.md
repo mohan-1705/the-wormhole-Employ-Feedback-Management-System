@@ -1,4 +1,4 @@
-# The Employ Feedback Management System [[Live]](https://employ-feedback-management.herokuapp.com/employ/sign-up)
+# The Employ Feedback Management System 
 
 Employee Feedback Management System is an ERP platform where an Admin can add reviews to the employees in their organisation, based on their performance. 
 The reviews given to an employee can be assigned to other employees by an Admin, who can give feedbacks on that review, suggesting the employee ways of 
@@ -9,9 +9,9 @@ version for the purpose of viewing its basic functionality.
 
 The Link for the same is :- https://employ-feedback-management.herokuapp.com/
 
-A proper [video](https://youtu.be/uPLQR5Zl49U) guide for this can be found at this youtube link
+A proper [Demo video](https://drive.google.com/file/d/1RU1dEaxx8HoTYSkSyFSP8F4f28QQXrDn/view?usp=drivesdk) 
 
-**[Link](https://youtu.be/uPLQR5Zl49U)**
+**[ this link is code walkthrough video link ](https://drive.google.com/file/d/1kSh6i5vKfiqMQYj75aYJwQNy6uEXWjfT/view?usp=drivesdk)**
 
 Steps for running this project :-
 1. Clone this git repository, making sure you have Node and npm installed on your system.
