@@ -12,8 +12,8 @@ The Link for the same is :-(https://rnyum-43-227-130-167.a.free.pinggy.link/empl
  A proper [Demovideo](https://youtu.be/XUiyGXaX_Qs?si=g4Px6ez_xs08Ihtp) guide for this can be found at this youtube link
 [Link](https://youtu.be/XUiyGXaX_Qs?si=g4Px6ez_xs08Ihtp)
 
-A proper [codewalkthrough](https://youtu.be/b3VcelvNVQc?si=LZo6guetdGQqHgi1) guide for this can be found at this youtube link
-[link](https://youtu.be/b3VcelvNVQc?si=LZo6guetdGQqHgi1)
+A proper [codewalkthrough](https://www.youtube.com/watch?v=SDF4yC6FTmo) guide for this can be found at this youtube link
+[link](https://www.youtube.com/watch?v=SDF4yC6FTmo)
 
 
 Steps for running this project :-
