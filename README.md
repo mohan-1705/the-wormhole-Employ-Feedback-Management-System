@@ -9,11 +9,12 @@ version for the purpose of viewing its basic functionality.
 
 The Link for the same is :-(https://rnyum-43-227-130-167.a.free.pinggy.link/employ/sign-up)
 
-A proper [Demo video]
-(https://drive.google.com/file/d/1RU1dEaxx8HoTYSkSyFSP8F4f28QQXrDn/view)
+ A proper [Demovideo](https://youtu.be/XUiyGXaX_Qs?si=g4Px6ez_xs08Ihtp) guide for this can be found at this youtube link
+[Link](https://youtu.be/XUiyGXaX_Qs?si=g4Px6ez_xs08Ihtp)
 
-[this link is code walkthrough video link]
-(https://drive.google.com/file/d/1kSh6i5vKfiqMQYj75aYJwQNy6uEXWjfT/view)
+A proper [codewalkthrough](https://youtu.be/b3VcelvNVQc?si=LZo6guetdGQqHgi1) guide for this can be found at this youtube link
+[link](https://youtu.be/b3VcelvNVQc?si=LZo6guetdGQqHgi1)
+
 
 Steps for running this project :-
 1. Clone this git repository, making sure you have Node and npm installed on your system.
