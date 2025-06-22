@@ -9,11 +9,11 @@ version for the purpose of viewing its basic functionality.
 
 The Link for the same is :-(https://rnota-103-80-14-189.a.free.pinggy.link/employ/sign-up)
 
- A proper [Demovideo](https://youtu.be/9AzwtzP83Bw?si=VYzcfMyClLwLz4WP) guide for this can be found at this youtube link
-[Link](https://youtu.be/9AzwtzP83Bw?si=VYzcfMyClLwLz4WP)
+ A proper [Demovideo](https://youtu.be/9AzwtzP83Bw?si=OvE2_g7msaswFojz) guide for this can be found at this youtube link
+[Link](https://youtu.be/9AzwtzP83Bw?si=OvE2_g7msaswFojz)
 
-A proper [codewalkthrough](https://www.youtube.com/watch?v=SDF4yC6FTmo) guide for this can be found at this youtube link
-[link](https://www.youtube.com/watch?v=SDF4yC6FTmo)
+A proper [codewalkthrough](https://youtu.be/SDF4yC6FTmo?si=qXfeggwCxgB9LIiw) guide for this can be found at this youtube link
+[link](https://youtu.be/SDF4yC6FTmo?si=qXfeggwCxgB9LIiw)
 
 
 Steps for running this project :-
