@@ -1,4 +1,4 @@
-# The Employ Feedback Management System [[Live]](https://rnota-103-80-14-189.a.free.pinggy.link/employ/sign-up)
+# The Employ Feedback Management System 
 
 Employee Feedback Management System is an ERP platform where an Admin can add reviews to the employees in their organisation, based on their performance. 
 The reviews given to an employee can be assigned to other employees by an Admin, who can give feedbacks on that review, suggesting the employee ways of 
@@ -7,7 +7,6 @@ improving his performance or appreciating it.
 The platform is implemented using Node.js/Express.js alongside MongoDB as the database. The MongoDB Database has been hosted at Mongo Atlas and deployed using Pinggy as a test
 version for the purpose of viewing its basic functionality.
 
-The Link for the same is :-(https://rnota-103-80-14-189.a.free.pinggy.link/employ/sign-up)
 
  A proper [Demovideo](https://youtu.be/9AzwtzP83Bw?si=OvE2_g7msaswFojz) guide for this can be found at this youtube link
 [Link](https://youtu.be/9AzwtzP83Bw?si=OvE2_g7msaswFojz)
