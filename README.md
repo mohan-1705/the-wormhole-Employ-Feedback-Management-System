@@ -7,14 +7,6 @@ improving his performance or appreciating it.
 The platform is implemented using Node.js/Express.js alongside MongoDB as the database. The MongoDB Database has been hosted at Mongo Atlas and deployed using Pinggy as a test
 version for the purpose of viewing its basic functionality.
 
-
- A proper [Demovideo](https://youtu.be/9AzwtzP83Bw?si=OvE2_g7msaswFojz) guide for this can be found at this youtube link
-[Link](https://youtu.be/9AzwtzP83Bw?si=OvE2_g7msaswFojz)
-
-A proper [codewalkthrough](https://youtu.be/SDF4yC6FTmo?si=qXfeggwCxgB9LIiw) guide for this can be found at this youtube link
-[link](https://youtu.be/SDF4yC6FTmo?si=qXfeggwCxgB9LIiw)
-
-
 Steps for running this project :-
 1. Clone this git repository, making sure you have Node and npm installed on your system.
 2. Run the command `npm install`, to install all the dependencies to the system.
